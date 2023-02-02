@@ -1,0 +1,21 @@
+// SIZE
+$FSizeDefault: 22px;
+$FSizeLarge: 40px;
+// LINE HEIGHT
+$LHeightDefault: 32px;
+$LHeightLarge: 46px;
+// COLORS
+$TextColorWhite: #fff;
+$TextColorBlack: #000000;
+$BgColorWhite: #fff;
+$BgColorBlack: #1e1e1e;
+
+//
+$fWeightLarge: 700;
+$spacing: 0.64em;
+
+%text_template {
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 400;
+}
