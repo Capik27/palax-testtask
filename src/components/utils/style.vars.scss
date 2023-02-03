@@ -1,18 +1,23 @@
-// SIZE
-$FSizeDefault: 22px;
-$FSizeLarge: 40px;
-// LINE HEIGHT
-$LHeightDefault: 32px;
-$LHeightLarge: 46px;
 // COLORS
-$TextColorWhite: #fff;
-$TextColorBlack: #000000;
-$BgColorWhite: #fff;
-$BgColorBlack: #1e1e1e;
+$TextColor_White: #fff;
+$TextColor_Dark: #000000;
+$BgColor_White: #fff;
+$BgColor_Dark: #1e1e1e;
+$BgColorSearch_White: #e7e7e7;
+$BgColorSearch_Dark: #181818;
+// TEXT SIZE
+$FSize_Default: 22px;
+$FSize_Large: 40px;
+// LINE HEIGHT
+$LHeight_Default: 32px;
+$LHeight_Large: 46px;
 
 //
 $fWeightLarge: 700;
 $spacing: 0.64em;
+
+$Shadow_White: 7px 13px 0px rgba(0, 0, 0, 0.75);
+$Shadow_Dark: 7px 13px 0px rgba(255, 255, 255, 0.75);
 
 %text_template {
     font-family: "Jost";
