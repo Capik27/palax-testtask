@@ -1,0 +1,15 @@
+$card_w: 475px;
+$card_h: 591px;
+$Right_side: 684px;
+$left_side: 281px;
+
+%flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body {
+    @extend %flexbox;
+    flex-grow: 1;
+}

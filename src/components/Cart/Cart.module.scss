@@ -1,0 +1,24 @@
+@import "../../utils/style.vars.scss";
+$FSize_Badge: 14px;
+
+%flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    @extend %flexbox;
+}
+
+.badge {
+    @extend %flexbox;
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+    border-radius: 50%;
+    background-color: $TextColor_Dark;
+    color: $TextColor_Light;
+    font-size: $FSize_Badge;
+    line-height: 20px;
+}

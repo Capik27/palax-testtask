@@ -1,0 +1,59 @@
+@import "../../utils/style.vars.scss";
+$BgColorSearch_Light: #e7e7e7;
+$BgColorSearch_Dark: #181818;
+$gap: 10px;
+$B_Radius: 48px;
+$Input_Height: 27px;
+$color_active: #ccc;
+
+%main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    width: 100%;
+    max-width: 333px;
+    min-width: 150px;
+    gap: $gap;
+
+    cursor: text;
+
+    border: 1px solid $TextColor_Dark;
+    border-radius: $B_Radius;
+    background-color: $BgColorSearch_Light;
+
+    input {
+        height: $Input_Height;
+        width: 80px;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        font-size: $FSize_Default;
+        line-height: $LHeight_Default;
+        color: $TextColor_Dark;
+
+        &::-webkit-input-placeholder {
+            color: $TextColor_Dark;
+        }
+        &::-moz-placeholder {
+            color: $TextColor_Dark;
+        }
+    }
+}
+
+.main {
+    @extend %main;
+}
+
+.main_active {
+    @extend %main;
+    background-color: $TextColor_Light;
+    color: $TextColor_Light;
+    img {
+        opacity: 0.25;
+    }
+    input {
+        opacity: 0.25;
+        width: 100%;
+    }
+}

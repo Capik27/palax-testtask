@@ -1,0 +1,49 @@
+$FSize_Large: 40px;
+$LineH_Large: 46px;
+$Icon_Width: 24px;
+
+$size_search: 24.8%;
+$size_company: 27.4%;
+$size_default: 11.32%;
+$size_icon: 3.47%;
+
+%flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.item {
+    &_search {
+        @extend %flexbox;
+        width: $size_search;
+    }
+    &_company {
+        @extend %flexbox;
+        width: $size_company;
+    }
+    &_default {
+        @extend %flexbox;
+        width: $size_default;
+    }
+    &_icon {
+        @extend %flexbox;
+        width: $size_icon;
+        height: $Icon_Width;
+    }
+}
+
+.bigtext {
+    font-size: $FSize_Large;
+    white-space: nowrap;
+}
+
+.icon {
+    width: $Icon_Width;
+}
+
+.icon_heart {
+    width: $Icon_Width;
+    padding-bottom: 2px;
+}
