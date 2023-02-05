@@ -1,0 +1,71 @@
+@import "utils/style.vars.scss";
+
+$card_w: 475px;
+$card_h: 591px;
+$Right_side: 684px;
+$left_side: 281px;
+
+$max_btn_w: 443px;
+$max_btn_h: 68px;
+$max_icon_w: 64px;
+
+$gap: 22px;
+
+%flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%btn {
+    width: 100%;
+    height: 100%;
+    max-width: $max_btn_w;
+    max-height: $max_btn_h;
+    cursor: pointer;
+    border: 1px solid $TextColor_Dark;
+    font-size: $FSize_Default;
+    line-height: $LHeight_Default;
+    position: relative;
+
+    transition-property: all;
+    transition-duration: 0.33s;
+    &:hover {
+        font-weight: $fWeight_Large;
+    }
+}
+
+.button {
+    @extend %btn;
+    color: $TextColor_Dark;
+}
+
+.add_btn {
+    @extend %btn;
+    @extend %flex;
+    background-color: $BgColor_Dark;
+    color: $TextColor_Light;
+}
+
+.add_count {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    max-width: $max_icon_w;
+    @extend %flex;
+    background-color: $BgColor_Light;
+
+    &:hover img {
+        transform: scale(1.1);
+    }
+
+    img {
+        transition-property: all;
+        transition-duration: 0.33s;
+    }
+}
+
+.add_icon {
+    filter: invert(100%);
+}

@@ -1,5 +1,4 @@
 @import "../../utils/style.vars.scss";
-$Navbar_Height: 50px;
 $Gap: 0px;
 $Icon_Width: 24px;
 
@@ -45,12 +44,4 @@ $Spacing: 0.64em;
 .icon_heart {
     width: $Icon_Width;
     padding-bottom: 2px;
-}
-
-.grid {
-    display: grid;
-    gap: $Gap;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-    grid-auto-rows: minmax(50px, auto);
-    background-color: $BgColor_Dark;
 }

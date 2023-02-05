@@ -1,0 +1,76 @@
+@import "utils/style.vars.scss";
+
+$card_w: 475px; // 63%
+$card_h: 591px;
+$Right_side: 684px;
+$left_side: 281px; // 37%
+
+//756
+
+%flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: $card_h;
+    width: 100%;
+}
+
+.main {
+    @extend %flexbox;
+    position: relative;
+    gap: 5px;
+    width: 52.5%;
+    height: 100%;
+}
+
+%shadow {
+    transition-property: all;
+    transition-duration: 0.33s;
+    &:hover {
+        box-shadow: $Shadow_Light;
+    }
+}
+
+.single {
+    width: 63%;
+    height: 100%;
+    max-width: $card_w;
+    max-height: $card_h;
+    border: 1px solid #000;
+    @extend %flexbox;
+    @extend %shadow;
+}
+
+.view {
+    @extend %flexbox;
+    flex-direction: column;
+    justify-content: flex-start;
+    // align-items: flex-start;
+    gap: 52px;
+    width: 37%;
+    height: 100%;
+    text-align: center;
+    a {
+        cursor: pointer;
+        align-self: center;
+        text-decoration: none;
+        color: $TextColor_Dark;
+    }
+}
+
+.image {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mini {
+    max-width: 111px;
+    max-height: 139px;
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid #000;
+    cursor: pointer;
+}

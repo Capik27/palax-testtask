@@ -1,3 +1,4 @@
+@import "utils/style.vars.scss";
 $Last_element_width: 43.4%;
 
 %flexbox {
@@ -15,5 +16,6 @@ $Last_element_width: 43.4%;
 
 .item {
     @extend %flexbox;
+    @extend %line;
     width: 11.32%;
 }

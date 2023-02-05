@@ -1,6 +1,6 @@
 @import "../../utils/style.vars.scss";
 
-%text_template {
+%template {
   display: flex;
   flex-direction: column;
   font-family: "Jost";
@@ -10,23 +10,28 @@
   font-weight: $fWeight_Default;
   font-size: $FSize_Default;
   line-height: $LHeight_Default;
-  max-width: $WEIGHT_LIMIT;
+  max-width: $WIDTH_LIMIT;
 
-  border: 1px solid black;
+  overflow-x: hidden;
 }
 
 .app {
-  @extend %text_template;
+  @extend %template;
   color: $TextColor_Dark;
   background-color: $BgColor_Light;
+
+  filter: invert(0%);
 }
 
 .app-dark {
-  @extend %text_template;
+  @extend %template;
   color: $TextColor_Light;
   background-color: $BgColor_Dark;
 
+  [data-img],
+  [data-add],
   header,
+  main,
   footer {
     filter: invert(100%);
   }

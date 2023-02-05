@@ -1,0 +1,88 @@
+@import "utils/style.vars.scss";
+
+$card_w: 475px;
+$card_h: 591px;
+$Right_side: 684px;
+$left_side: 281px;
+
+$max_btn_w: 443px;
+$max_btn_h: 68px;
+$max_icon_w: 64px;
+
+$gap: 22px;
+
+%flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%flexbox {
+    @extend %flex;
+    max-height: $card_h;
+    width: 100%;
+    gap: $gap;
+}
+
+.main {
+    @extend %flexbox;
+    flex-direction: column;
+    width: 100%;
+    max-width: $max_btn_w;
+    height: $card_h;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+%btn {
+    width: 100%;
+    height: 100%;
+    max-width: $max_btn_w;
+    max-height: $max_btn_h;
+    cursor: pointer;
+    border: 1px solid $TextColor_Dark;
+    font-size: $FSize_Default;
+    line-height: $LHeight_Default;
+    position: relative;
+
+    transition-property: all;
+    transition-duration: 0.33s;
+    &:hover {
+        font-weight: $fWeight_Large;
+    }
+}
+
+.wrap {
+    @extend %flexbox;
+    padding: 5px;
+    height: 100%;
+    width: 47.5%;
+}
+
+.button {
+    @extend %btn;
+    color: $TextColor_Dark;
+    background-color: $BgColor_Light;
+}
+
+.add_btn {
+    @extend %btn;
+    @extend %flex;
+    background-color: $BgColor_Dark;
+    color: $TextColor_Light;
+}
+
+.add_count {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    max-width: $max_icon_w;
+    @extend %flex;
+    background-color: $BgColor_Light;
+}
+
+.text {
+    color: $TextColor_Dark;
+}

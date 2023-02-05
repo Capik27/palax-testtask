@@ -4,16 +4,23 @@ $BgColorSearch_Dark: #181818;
 $gap: 10px;
 $B_Radius: 48px;
 $Input_Height: 27px;
+$Search_H: $Input_Height + 2px;
 $color_active: #ccc;
 
-%main {
+%flexbox {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+%main {
+    @extend %flexbox;
+    margin: 0 2px;
     padding: 0 15px;
     width: 100%;
     max-width: 333px;
     min-width: 150px;
+    position: relative;
     gap: $gap;
 
     cursor: text;
@@ -56,4 +63,38 @@ $color_active: #ccc;
         opacity: 0.25;
         width: 100%;
     }
+}
+
+.field {
+    cursor: default;
+    position: absolute;
+    left: 0;
+    bottom: calc((($Navbar_Height - $Search_H) / 2) * -1);
+    transform: translateY(calc(100% - 12px));
+    width: 100%;
+
+    background-color: $TextColor_Light;
+    z-index: 2;
+    @extend %flexbox;
+    flex-direction: column;
+    gap: 16px;
+    padding: 43px 0;
+
+    &_bg {
+        z-index: 1;
+        background-color: $TextColor_Light;
+        position: absolute;
+        width: 100vw;
+        left: 0;
+        top: $Navbar_Height;
+        border-top: 1px solid $TextColor_Dark;
+        border-bottom: 1px solid $TextColor_Dark;
+    }
+}
+
+.form_wrap {
+    @extend %flexbox;
+    height: $Navbar_Height;
+    width: 100%;
+    position: relative;
 }

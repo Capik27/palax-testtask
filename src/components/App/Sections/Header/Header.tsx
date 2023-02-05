@@ -43,7 +43,7 @@ export const Header = () => {
 						<img src={heart} alt="heart" className={style.icon_heart} />
 					</a>
 				</div>
-				<div className={style.item_icon}>
+				<div className={style.item_last}>
 					<ThemeChanger />
 				</div>
 			</Navbar>

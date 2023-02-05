@@ -1,0 +1,13 @@
+@import "../../utils/style.vars.scss";
+
+$card_h: 591px;
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: $card_h;
+    height: 100%;
+    width: 100vw;
+    padding: 5px 0;
+}

@@ -11,9 +11,15 @@ $FSize_Large: 40px;
 $LHeight_Default: 32px;
 $LHeight_Large: 46px;
 //
-$WEIGHT_LIMIT: 1440px;
+$WIDTH_LIMIT: 1440px;
 $fWeight_Default: 400;
 $fWeight_Large: 700;
+//
+$Navbar_Height: 50px;
 
 $Shadow_Light: 7px 13px 0px rgba(0, 0, 0, 0.75);
 $Shadow_Dark: 7px 13px 0px rgba(255, 255, 255, 0.75);
+
+%line {
+    border-right: 1px solid $TextColor_Dark;
+}

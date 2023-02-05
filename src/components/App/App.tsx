@@ -6,7 +6,7 @@ import { Main } from "./Sections/Main";
 
 export default function App() {
 	const { type }: any = useTheme();
-	console.log("app", type);
+
 	return (
 		<div className={type ? "app-dark" : "app"}>
 			<Header />

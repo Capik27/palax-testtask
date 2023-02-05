@@ -1,3 +1,4 @@
+@import "utils/style.vars.scss";
 $FSize_Large: 40px;
 $LineH_Large: 46px;
 $Icon_Width: 24px;
@@ -17,20 +18,27 @@ $size_icon: 3.47%;
 .item {
     &_search {
         @extend %flexbox;
+        @extend %line;
         width: $size_search;
     }
     &_company {
         @extend %flexbox;
+        @extend %line;
         width: $size_company;
     }
     &_default {
         @extend %flexbox;
+        @extend %line;
         width: $size_default;
     }
     &_icon {
         @extend %flexbox;
         width: $size_icon;
-        height: $Icon_Width;
+        @extend %line;
+    }
+    &_last {
+        @extend %flexbox;
+        width: $size_icon;
     }
 }
 
@@ -39,11 +47,21 @@ $size_icon: 3.47%;
     white-space: nowrap;
 }
 
+%icon_hover {
+    transition-property: all;
+    transition-duration: 0.33s;
+    &:hover {
+        filter: opacity(0.45);
+    }
+}
+
 .icon {
     width: $Icon_Width;
+    @extend %icon_hover;
 }
 
 .icon_heart {
     width: $Icon_Width;
     padding-bottom: 2px;
+    @extend %icon_hover;
 }

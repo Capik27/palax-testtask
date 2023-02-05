@@ -5,8 +5,10 @@ export const Footer = () => {
 	return (
 		<footer>
 			<Navbar>
-				<div className={style.item}>
-					<a href="/">Cart</a>
+				<div className={style.item} style={{ backgroundColor: "#000" }}>
+					<a href="/" style={{ color: "#fff" }}>
+						Cart
+					</a>
 				</div>
 				<div className={style.item}>
 					<a href="/">Overview</a>

@@ -1,3 +1,5 @@
+import style from "components/App/Sections/Header/Header.module.scss";
+
 import React, { SyntheticEvent } from "react";
 //import style from "./ThemeChanger.module.scss";
 //
@@ -6,7 +8,6 @@ import { useTheme } from "hooks/useTheme";
 
 export const ThemeChanger = () => {
 	const { type, setType }: any = useTheme();
-	console.log(type);
 
 	const handleChange = (e: SyntheticEvent) => {
 		e.preventDefault();
@@ -15,7 +16,7 @@ export const ThemeChanger = () => {
 
 	return (
 		<a href="/" onClick={handleChange}>
-			<img src={theme} alt="theme" />
+			<img src={theme} alt="theme" className={style.icon} />
 		</a>
 	);
 };
