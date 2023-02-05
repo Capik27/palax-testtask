@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/palax-testtask/static/css/main.a390870b.css",
+    "main.js": "/palax-testtask/static/js/main.d30c553e.js",
+    "index.html": "/palax-testtask/index.html",
+    "main.a390870b.css.map": "/palax-testtask/static/css/main.a390870b.css.map",
+    "main.d30c553e.js.map": "/palax-testtask/static/js/main.d30c553e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a390870b.css",
+    "static/js/main.d30c553e.js"
+  ]
+}
