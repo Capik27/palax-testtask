@@ -7,7 +7,7 @@ import theme from "assets/theme.png";
 import { useTheme } from "hooks/useTheme";
 
 export const ThemeChanger = () => {
-	const { type, setType }: any = useTheme();
+	const { setType }: any = useTheme();
 
 	const handleChange = (e: SyntheticEvent) => {
 		e.preventDefault();
@@ -16,7 +16,7 @@ export const ThemeChanger = () => {
 
 	return (
 		<a href="/" onClick={handleChange}>
-			<img src={theme} alt="theme" className={style.icon} />
+			<img src={theme} data-icon alt="theme" className={style.icon} />
 		</a>
 	);
 };

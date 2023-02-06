@@ -78,6 +78,7 @@ export const Search = () => {
 			<div className={style.form_wrap}>
 				<form
 					data-search
+					data-search-form
 					className={pressed ? style.main_active : style.main}
 					onClick={handleClick}
 					onSubmit={handleSubmit}
@@ -86,6 +87,7 @@ export const Search = () => {
 					<input
 						data-search
 						placeholder="Search"
+						maxLength={30}
 						onChange={handleChange}
 						value={value}
 						ref={inputRef}

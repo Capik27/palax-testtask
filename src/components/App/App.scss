@@ -11,28 +11,54 @@
   font-size: $FSize_Default;
   line-height: $LHeight_Default;
   max-width: $WIDTH_LIMIT;
+  margin: 0 auto;
+}
 
+%wrap {
+  width: 100%;
+  height: 100%;
   overflow-x: hidden;
+  filter: invert(0%);
+}
+.app_wrap {
+  @extend %wrap;
+  color: $TextColor_Dark;
+  background-color: $BgColor_Light;
+}
+.app_wrap_dark {
+  @extend %wrap;
+  color: $TextColor_Light;
+  background-color: $BgColor_Dark;
 }
 
 .app {
   @extend %template;
-  color: $TextColor_Dark;
-  background-color: $BgColor_Light;
-
-  filter: invert(0%);
 }
 
 .app-dark {
   @extend %template;
-  color: $TextColor_Light;
-  background-color: $BgColor_Dark;
 
   [data-img],
   [data-add],
-  header,
   main,
   footer {
+    filter: invert(100%);
+  }
+
+  header {
+    a,
+    [data-search-form] {
+      filter: invert(100%);
+    }
+    [data-line] {
+      border-right: 1px solid $TextColor_Light;
+    }
+  }
+
+  [data-dark] {
+    a {
+      color: $TextColor_Light;
+    }
     filter: invert(100%);
   }
 }
