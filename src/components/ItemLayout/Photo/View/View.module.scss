@@ -50,11 +50,17 @@ $left_side: 281px; // 37%
     width: 37%;
     height: 100%;
     text-align: center;
+    overflow: hidden;
+    font-size: $FSize_Default;
+    line-height: $LHeight_Default;
     a {
         cursor: pointer;
         align-self: center;
         text-decoration: none;
         color: $TextColor_Dark;
+        &:hover {
+            font-weight: $fWeight_Large;
+        }
     }
 }
 
