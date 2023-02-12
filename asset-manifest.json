@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/palax-testtask/static/css/main.ac5db383.css",
-    "main.js": "/palax-testtask/static/js/main.e75f20a3.js",
+    "main.css": "/palax-testtask/static/css/main.0866d522.css",
+    "main.js": "/palax-testtask/static/js/main.1f83dd30.js",
     "index.html": "/palax-testtask/index.html",
-    "main.ac5db383.css.map": "/palax-testtask/static/css/main.ac5db383.css.map",
-    "main.e75f20a3.js.map": "/palax-testtask/static/js/main.e75f20a3.js.map"
+    "main.0866d522.css.map": "/palax-testtask/static/css/main.0866d522.css.map",
+    "main.1f83dd30.js.map": "/palax-testtask/static/js/main.1f83dd30.js.map"
   },
   "entrypoints": [
-    "static/css/main.ac5db383.css",
-    "static/js/main.e75f20a3.js"
+    "static/css/main.0866d522.css",
+    "static/js/main.1f83dd30.js"
   ]
 }
