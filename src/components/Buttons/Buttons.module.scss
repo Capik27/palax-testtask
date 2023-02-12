@@ -38,6 +38,7 @@ $gap: 22px;
 .button {
     @extend %btn;
     color: $TextColor_Dark;
+    background-color: $BgColor_Light;
 }
 
 .add_btn {
@@ -68,4 +69,95 @@ $gap: 22px;
 
 .add_icon {
     filter: invert(100%);
+}
+
+.tabbtn {
+    @extend %btn;
+    @extend %flex;
+    background-color: $BgColor_Light;
+    color: $TextColor_Dark;
+
+    &_active {
+        @extend %btn;
+        @extend %flex;
+
+        // filter: invert(100%);
+
+        .tabbtn_arrow {
+            transform: rotate(180deg);
+            filter: invert(100%);
+        }
+        .tabbtn_text {
+            background-color: $BgColor_Dark;
+            color: $TextColor_Light;
+        }
+
+        &:hover {
+            font-weight: $fWeight_Large;
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &_text {
+        @extend %btn;
+        border: none;
+        background-color: $BgColor_Light;
+    }
+
+    &_arrow {
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        max-width: $max_icon_w;
+        @extend %flex;
+
+        &:hover img {
+            transform: scale(1.1);
+        }
+
+        img {
+            transition-property: transform;
+            transition-duration: 0.33s;
+        }
+    }
+
+    &_options {
+        @extend %flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 0;
+        left: -1px;
+        transform: translateY(100%);
+        z-index: 5;
+        // height: 100%;
+        width: calc(100% + 2px);
+        border: 1px solid $TextColor_Dark;
+        border-bottom: none;
+        // animation: animate 0.15s linear;
+
+        &_btn {
+            @extend %btn;
+            border: none;
+            min-height: $max_btn_h;
+            background-color: $BgColor_Light;
+            color: $TextColor_Dark;
+            border-bottom: 1px solid $TextColor_Dark;
+        }
+    }
+
+    &:hover {
+        font-weight: $fWeight_Large;
+    }
+}
+
+@keyframes animate {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
 }

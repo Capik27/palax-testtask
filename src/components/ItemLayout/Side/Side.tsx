@@ -1,4 +1,5 @@
 import { AddButton } from "components/Buttons/AddButton";
+import { TabButton } from "components/Buttons/TabButton";
 import style from "./Side.module.scss";
 
 export const Side = (props: any) => {
@@ -17,8 +18,14 @@ export const Side = (props: any) => {
 					</p>
 					<p className={style.text}>*Check availability in boutiques</p>
 				</div>
-				<AddButton itemName={"Benzopila"} />
-				<AddButton itemName={"Lezvie"} />
+				<TabButton
+					first={0}
+					options={["Material", "Steel", "Plastic", "Tree"]}
+				/>
+				<TabButton
+					first={3}
+					options={["test1", "test2", "test3", "test4", "test5"]}
+				/>
 			</div>
 		</div>
 	);
